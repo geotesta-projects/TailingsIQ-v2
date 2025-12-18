@@ -1,0 +1,22 @@
+{
+  "name": "tailingsiq-v2",
+  "version": "1.0.0",
+  "description": "Tailings IQ - Geotechnical Tailings Management System",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install",
+    "dev": "concurrently \"cd backend && python manage.py runserver\" \"cd frontend && npm start\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.1.0"
+  },
+  "lint-staged": {
+  "*.{js,jsx,ts,tsx,css,scss,md,json,yml,yaml}": [
+    "npx prettier --write"
+  ]
+}
+}
